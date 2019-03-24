@@ -30,12 +30,14 @@ git config --global user.email "EMAIL"
 ## 4.配置Git秘钥key
 
 ssh-keygen -t rsa -C "EMAIL" 
+
 <div align="left">
     <img src="https://jasonccj-1258779086.cos.ap-beijing.myqcloud.com/img/Blog/Git%20for%20windows/pubKey.png" width="700px" />
 </div>
 
 ## 5.秘钥公有key的使用（参考）
 复制is_rsa.pub里面的秘钥到github下的ssh
+
 <div align="left">
     <img src="https://jasonccj-1258779086.cos.ap-beijing.myqcloud.com/img/Blog/Git%20for%20windows/github.png" width="700px" />
 </div>
