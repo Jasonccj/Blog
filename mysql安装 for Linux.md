@@ -1,4 +1,4 @@
-## Linux下安装mysql5.7及配置(yum安装)
+## mysql安装 for Linux
 #### 1home目录下新建安装包存放位置
 ```
 cd home
