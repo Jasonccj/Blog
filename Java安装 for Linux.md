@@ -1,4 +1,4 @@
-## Linux下安装java及配置(yum安装)
+## Java安装 for Linux
 查询yum下所有的java版本
 ```
 yum list java*
