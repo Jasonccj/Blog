@@ -82,6 +82,10 @@ body{
             只是有字号、行间距、中文字体、英文字体设置。
 ## 13.配色表参考
 
+<div align="left">
+    <img src="https://jasonccj-1258779086.cos.ap-beijing.myqcloud.com/img/Blog/html%2Bcss/color.png" width="700px" />
+</div>
+
 ## 14.长度单位
 长度单位总结一下，目前比较常用到px（像素）、em、% 百分比，要注意其实这三种单位都是相对单位。
 1、像素
