@@ -30,7 +30,9 @@
 ## 9.层模型--相对定位
 如果想为元素设置层模型中的相对定位，需要设置position:relative（表示相对定位），它通过left、right、top、bottom属性确定元素在正常文档流中的偏移位置。相对定位完成的过程是首先按static(float)方式生成一个元素(并且元素像层一样浮动了起来)，然后相对于以前的位置移动，移动的方向和幅度由left、right、top、bottom属性确定，偏移前的位置保留不动。
 
-
+<div align="left">
+    <img src="https://jasonccj-1258779086.cos.ap-beijing.myqcloud.com/img/Blog/html%2Bcss/relative1.png" width="700px" />
+</div>
 
 什么叫做“偏移前的位置保留不动”呢？大家可以做一个实验，在右侧代码编辑器的19行div标签的后面加入一个span标签，在标并在span标签中写入一些文字。如下代码：
 ```
@@ -38,7 +40,9 @@
     <div id="div1"></div><span>偏移前的位置还保留不动，覆盖不了前面的div没有偏移前的位置</span>
 </body>
 ```
-
+<div align="left">
+    <img src="https://jasonccj-1258779086.cos.ap-beijing.myqcloud.com/img/Blog/html%2Bcss/relative2.png" width="700px" />
+</div>
 
 从效果图中可以明显的看出，虽然div元素相对于以前的位置产生了偏移，但是div元素以前的位置还是保留着，所以后面的span元素是显示在了div元素以前位置的后面。
 ## 10.层模型--固定定位
