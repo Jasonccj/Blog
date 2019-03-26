@@ -83,7 +83,7 @@ body{
 ## 13.配色表参考
 
 <div align="left">
-    <img src="https://jasonccj-1258779086.cos.ap-beijing.myqcloud.com/img/Blog/html%2Bcss/color.png" width="700px" />
+    <img src="https://jasonccj-1258779086.cos.ap-beijing.myqcloud.com/img/Blog/html%2Bcss/color.jpg" width="700px" />
 </div>
 
 ## 14.长度单位
