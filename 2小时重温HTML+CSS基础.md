@@ -114,7 +114,8 @@ css:
 p{font-size:14px}
 span{font-size:0.8em;}
 ```
-结果 span 中的字体“例子”字体大小就为 11.2px（14 * 0.8 = 11.2px）。
+结果 span 中的字体“例子”字体大小就为 11.2px（14 * 0.8 = 11.2px）。  
+
 3、百分比
 ```
 p{font-size:12px;line-height:130%}
