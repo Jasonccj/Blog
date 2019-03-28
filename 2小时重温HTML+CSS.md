@@ -218,6 +218,7 @@ html代码：
 ```
 css代码：
 ```
+<style>
 .container {
     float:left;
     position:relative;
@@ -228,15 +229,106 @@ css代码：
     position:relative;
     left:-50%;
 }
+</style>
 ```
 
 这三种方法使用得都非常广泛，各有优缺点，具体选用哪种方法，可以视具体情况而定。   
 
+## 16.垂直居中
+### 1.单行文本
+父元素高度确定的单行文本的竖直居中的方法是通过设置父元素的 height 和 line-height 高度一致来实现的   
+html代码：
+```
+<div class="container">
+    Hello,Jasonccj!
+</div>
+```
+css代码:
+```
+<style>
+.container{
+    height:100px;
+    line-height:100px;
+    background:#999;
+}
+</style>
+```
+这种文字行高与块高一致带来了一个弊端：当文字内容的长度大于块的宽时，就有内容脱离了块。   
+
+### 2.多行文本
+#### a.方法一:
+使用插入 table  (包括tbody、tr、td)标签，同时设置 vertical-align：middle。   
+css 中有一个用于竖直居中的属性 vertical-align，在父元素设置此样式时，会对inline-block类型的子元素都有用.   
+html代码：
+```
+<body>
+<table><tbody><tr><td class="wrap">
+<div>
+    <p>居中的内容</p>
+</div>
+</td></tr></tbody></table>
+</body>
+```
+css代码：
+```
+<style>
+table td{height:500px;background:#ccc}
+</style>
+```
+因为 td 标签默认情况下就默认设置了 vertical-align 为 middle，所以我们不需要显式地设置了。   
+
+#### b.方法二:
+在 chrome、firefox 及 IE8 以上的浏览器下可以设置块级元素的 display 为 table-cell（设置为表格单元显示），激活 vertical-align 属性，但注意 IE6、7 并不支持这个样式, 兼容性比较差。  
+html代码：
+```
+<div class="container">
+    <div>
+        <p>居中部分</p>
+    </div>
+</div>
+```
+css代码：
+```
+<style>
+.container{
+    height:300px;
+    background:#ccc;
+    display:table-cell;
+    vertical-align:middle;
+}
+</style>
+```
+这种方法的好处是不用添加多余的无意义的标签，但缺点是不兼容IE6,7
+
+## 17.隐性改变display类型
+当为元素（不论之前是什么类型元素，display:none 除外）设置以下 2 个句之一：
+ >* 1. position : absolute 
+ >* 2. float : left 或 float:right 
+
+元素的display显示类型就会自动变为以 display:inline-block（块状元素）的方式显示，当然就可以设置元素的 width 和 height 了，且默认宽度不占满父元素。
+
+html代码:
+```
+<div class="container">
+    <a href="#" title="">我们知道a标签是行内元素,现在为该标签设置宽度了.</a>
+</div>
+```
+css代码:
+```
+<style>
+.container a{
+    position:absolute;
+    width:200px;
+    background:#ccc;
+}
+</style>
+```
+
 
 # 写在最后
-- 作者: Jasonccj
-- 如果帮到你了,点个star.鼓励一下!
-- github地址：https://github.com/Jasonccj
-- 慕课网博客地址:https://www.imooc.com/u/4139837/articles
-- qq交流群： 424072183   https://jq.qq.com/?_wv=1027&k=5E6XfSx
-- 掘金博客地址：https://juejin.im/user/59035c4c61ff4b00669b241f/posts
+- [@Jasonccj](https://github.com/Jasonccj)
+- [github](https://github.com/Jasonccj)
+- [慕课网博客](https://www.imooc.com/u/4139837/articles)
+- [掘金博客](https://juejin.im/user/59035c4c61ff4b00669b241f/posts)
+- [QQ交流群:424072183](https://jq.qq.com/?_wv=1027&k=5E6XfSx)
+
