@@ -139,6 +139,98 @@ margin：0 auto;
 2)设置 display: inline 方法：与第一种类似，显示类型设为 行内元素，进行不定宽元素的属性设置  
 3)设置 position:relative 和 left:50%：利用 相对定位 的方式，将元素向左偏移 50% ，即达到居中的目的  
 
+1）.加入 table 标签  
+为什么选择方法一加入table标签? 是利用table标签的长度自适应性---即不定义其长度也不默认父元素body的长度（table其长度根据其内文本长度决定），因此可以看做一个定宽度块元素，然后再利用定宽度块状居中的margin的方法，使其水平居中。  
+
+第一步：为需要设置的居中的元素外面加入一个 table 标签 ( 包括 <tbody>、<tr>、<td> )。  
+第二步：为这个 table 设置“左右 margin 居中”（这个和定宽块状元素的方法一样）。  
+html代码：
+```
+<div>
+ <table>
+  <tbody>
+    <tr><td>
+    <ul>
+        <li>我是第一行文本</li>
+        <li>我是第二行文本</li>
+        <li>我是第三行文本</li>
+    </ul>
+    </td></tr>
+  </tbody>
+ </table>
+</div>
+```
+css代码：
+```
+<style>
+table{
+    border:1px solid;
+    margin:0 auto;
+}
+</style>
+```
+
+2)设置 display: inline 方法  
+改变块级元素的 display 为 inline 类型（设置为 行内元素 显示），然后使用 text-align:center 来实现居中效果  
+html代码：
+```
+<body>
+<div class="container">
+    <ul>
+        <li><a href="#">1</a></li>
+        <li><a href="#">2</a></li>
+        <li><a href="#">3</a></li>
+    </ul>
+</div>
+</body>
+```
+css代码：
+```
+<style>
+.container{
+    text-align:center;
+}
+/* margin:0;padding:0（消除文本与div边框之间的间隙）*/
+.container ul{
+    list-style:none;
+    margin:0;
+    padding:0;
+    display:inline;
+}
+/* margin-right:8px（设置li文本之间的间隔）*/
+.container li{
+    margin-right:8px;
+    display:inline;
+}
+</style>
+```
+这种方法相比第一种方法的优势是不用增加无语义标签，但也存在着一些问题：它将块状元素的 display 类型改为 inline，变成了行内元素，所以少了一些功能，比如设定长度值。   
+
+3)设置 position:relative 和 left:50%：利用 相对定位 的方式，将元素向左偏移 50% ，即达到居中的目的    
+方法三:通过给父元素设置 float，然后给父元素设置 position:relative 和 left:50%，子元素设置 position:relative 和 left: -50% 来实现水平居中。   
+html代码：
+```
+<body>
+<div class="container">
+    <div class="section">居中显示部分</div>
+</div>
+</body>
+```
+css代码：
+```
+.container {
+    float:left;
+    position:relative;
+    left:50%;
+}
+.section {
+    background:#ccc;
+    position:relative;
+    left:-50%;
+}
+```
+
+这三种方法使用得都非常广泛，各有优缺点，具体选用哪种方法，可以视具体情况而定。   
 
 
 # 写在最后
