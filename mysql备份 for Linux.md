@@ -60,3 +60,10 @@ service crond restart
 tail -f /var/log/cron
 ```
 
+# 写在最后
+- [@Jasonccj](https://github.com/Jasonccj)
+- [github](https://github.com/Jasonccj)
+- [慕课网博客](https://www.imooc.com/u/4139837/articles)
+- [掘金博客](https://juejin.im/user/59035c4c61ff4b00669b241f/posts)
+- [QQ交流群:424072183](https://jq.qq.com/?_wv=1027&k=5E6XfSx)
+
