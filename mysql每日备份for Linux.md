@@ -1,4 +1,4 @@
-# mysql备份for Linux   
+# mysql每日备份for Linux   
 ## 1.创建数据库备份目录
 选择自己想保存的目录,以下目录仅供演示:
 ```
