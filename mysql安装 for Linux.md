@@ -111,7 +111,7 @@ https://user-gold-cdn.xitu.io/2019/2/27/1692e28a73214f66?w=1032&h=647&f=png&s=80
 ## 拓展
 #### 新建用户
 ```
-CREATE USER 'icare_dev'@'%' IDENTIFIED BY 'icaredl2018DEV.';
+CREATE USER 'icare_dev'@'%' IDENTIFIED BY '*********';
 ```
 #### 用户授权
 ```
