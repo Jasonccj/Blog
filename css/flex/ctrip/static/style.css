@@ -1,0 +1,29 @@
+body {
+    /* 水平方向不会出现水平条 */
+    overflow-x: hidden;
+    /* 点击不会高亮 */
+    -webkit-tap-highlight-color: transparent;
+    max-width: 540px;
+    /* 一般移动布局最小宽度不会小于320px */
+    min-width: 320px;
+    margin: 0 auto;
+    background: red;
+    font: 400 16px/1.5 PingFangSC-regular,Tahoma,"Lucida Grande",Verdana,"Microsoft Yahei",STXihei,hei;
+}
+
+/* 搜索模块 */
+.search-index {
+    /* 固定定位跟父级没有关系，它以屏幕为准 */
+    position: fixed;
+    top: 0;
+    /* left: 0; */
+    /* left: 50%;
+    -webkit-transform: translateX(-50%); */
+    /* transform: translateX(-50%); */
+    /* 固定的盒子应该有宽度 */
+    width: 100%;
+    min-width: 320px;
+    max-width: 540px;
+    height: 44px;
+    background-color: pink;
+}
