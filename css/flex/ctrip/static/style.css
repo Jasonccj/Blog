@@ -7,23 +7,49 @@ body {
     /* 一般移动布局最小宽度不会小于320px */
     min-width: 320px;
     margin: 0 auto;
-    background: red;
     font: 400 16px/1.5 PingFangSC-regular,Tahoma,"Lucida Grande",Verdana,"Microsoft Yahei",STXihei,hei;
 }
 
 /* 搜索模块 */
 .search-index {
+    display: flex;
     /* 固定定位跟父级没有关系，它以屏幕为准 */
     position: fixed;
     top: 0;
-    /* left: 0; */
-    /* left: 50%;
-    -webkit-transform: translateX(-50%); */
-    /* transform: translateX(-50%); */
+    left: 0;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
     /* 固定的盒子应该有宽度 */
     width: 100%;
     min-width: 320px;
     max-width: 540px;
     height: 44px;
     background-color: pink;
+}
+
+a {
+    text-decoration: none;
+}
+
+.search {
+    flex: 1;
+}
+
+.user {
+    width: 51px;
+    height: 44px;
+    font-size: 12px;
+    text-align: center;
+    color: #fff;
+}
+
+.user::before {
+    content: "";
+    width: 22px;
+    height: 22px;
+    display: block;
+    background: url('../images/sprite.png') no-repeat 0 -36px;
+    background-size: 21px;
+    margin: 4px auto 0;
 }

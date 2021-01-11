@@ -7,6 +7,11 @@ http.createServer(function (req, res) {
         res.end(resource);
         return
     }
+    if (/^\/images/.test(req.url)) {
+        const resource = fs.readFileSync(`.${req.url}`);
+        res.end(resource);
+        return
+    }
     const html = fs.readFileSync('./index.html');
     res.end(html);
 }).listen(3000);
