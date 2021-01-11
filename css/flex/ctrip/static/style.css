@@ -26,22 +26,48 @@ body {
     max-width: 540px;
     height: 44px;
     background-color: pink;
+    padding-left: 12px;
 }
 
 a {
     text-decoration: none;
 }
 
+div {
+    box-sizing: border-box;
+}
+
 .search {
     flex: 1;
+    height: 28px;
+    line-height: 28px;
+    border: 1px solid red;
+    margin: 7px;
+    border-radius: 15px;
+    position: relative;
+    padding-left: 37px;
+    font-size: 15px;
+    color: #666;
+}
+
+.search::before {
+    content: "";
+    position: absolute;
+    top: 7px;
+    left: 14px;
+    width: 15px;
+    height: 15px;
+    background: url(../images/sprite.png) no-repeat 0 0;
+    background-size: 21px auto;
 }
 
 .user {
-    width: 51px;
+    width: 44px;
     height: 44px;
     font-size: 12px;
     text-align: center;
     color: #fff;
+    padding-right: 4px;
 }
 
 .user::before {
@@ -50,6 +76,6 @@ a {
     height: 22px;
     display: block;
     background: url('../images/sprite.png') no-repeat 0 -36px;
-    background-size: 21px;
+    background-size: 21px auto;
     margin: 4px auto 0;
 }
